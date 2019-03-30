@@ -128,7 +128,7 @@ p {
 
 
 #logo {
-    width: 200px;
+    width: 360px;
     height: 100%;
     padding: 0 10px;
     float: left;
@@ -218,7 +218,7 @@ span.clock-info {
     list-style: none;
     display: inline-block;
     text-align: left;
-    width: 19%;
+    width: 18%;
     position: relative;
     margin: 0 10px;
 }
