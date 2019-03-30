@@ -1,38 +1,25 @@
 body {
-    padding: 0px;
-    margin: 0px;
-    background: limegreen;
-    /* background: url(ls-example.png); */
-    /* background-size: cover; */
+    padding: 0;
+    margin: 0;
+    background: rgba(0,0,0,0);
+    overflow: hidden;
 }
-
-/* font and text */
-@font-face {
-    font-family: 'Haettenschweiler';
-    src:url('Haettenschweiler.ttf.woff') format('woff'),
-        url('Haettenschweiler.ttf.svg#Haettenschweiler') format('svg'),
-        url('Haettenschweiler.ttf.eot'),
-        url('Haettenschweiler.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 h2 {
     color: white;
-    font-family: Haettenschweiler;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 40px;
     font-weight: normal;
-    margin: 0px;
+    margin: 0;
     line-height: 60px;
     vertical-align: middle;
 }
 
 p {
     color: white;
-    font-family: Haettenschweiler;
+    font-family: Oswald, sans-serif;
     font-size: 20px;
-    margin: 0px;
+    margin: 0;
     line-height: 30px;
     vertical-align: middle;
 }
@@ -79,7 +66,7 @@ p {
 }
 
 .flair::before {
-    background: linear-gradient(to left,purple,#2a2a2a 50px) !important;
+    background: linear-gradient(to left,#3270ed,#2a2a2a 50px) !important;
 }
 
 .sbox .content, .sbox-small .content, .sbox-med .content {
@@ -128,7 +115,7 @@ p {
 
 #overlay-bottom {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     height: auto;
     width: 100%;
 }
@@ -144,17 +131,17 @@ p {
 }
 
 
-#sourcebots-logo {
+#logo {
     width: 200px;
     height: 100%;
-    padding: 0px 10px;
+    padding: 0 10px;
     float: left;
 }
 
-#sourcebots-logo img {
-    width: 200px;
-    height: auto;
-    margin: auto;
+#logo img {
+    width: auto;
+    height: 60px;
+    margin: 60px auto 40px auto;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -162,10 +149,9 @@ p {
 
 #match-counter {
     font-size: 60px;
-    margin-left: 230px;
+    margin-left: 380px;
     width: 300px;
     transition: width 0.9s ease-in-out, margin 1.5s ease-in-out;
-    /* width: auto; */
     position: relative;
 }
 
@@ -227,7 +213,7 @@ span.clock-info {
 }
 
 #zones ul {
-    padding-left: 0px;
+    padding-left: 0;
     width: 100%;
     position:relative;
 }
@@ -238,7 +224,7 @@ span.clock-info {
     text-align: left;
     width: 19%;
     position: relative;
-    margin: 0px 10px;
+    margin: 0 10px;
 }
 
 #zones ul li p{
@@ -259,7 +245,6 @@ span.clock-info {
     left:0;
     height: 100%;
     width: 300px;
-    padding-bottom: 270px;
     padding: 10px;
 }
 
@@ -315,7 +300,6 @@ span.clock-info {
     bottom: 0;
     left: 0;
     right: 0;
-    position: absolute;
     text-align: center;
 }
 
