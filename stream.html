@@ -1,7 +1,6 @@
-<html>
-
+<!doctype HTML>
+<html lang="en">
 <head>
-
     <meta charset="UTF-8"/>
     <title>Live stream Overlay</title>
 
@@ -9,16 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="moment.js"></script>
+    <script src="https://unpkg.com/moment@2.24.0/moment.js"></script>
     <script src="settings.js"></script>
-
     <script src="comp.js"></script>
     <script src="events.js"></script>
-
 </head>
-
 <body>
-
 <!-- Top match info -->
 <div id="overlay-top">
     <div id="overlay-top-content" class="sbox-small flair hidden">
@@ -28,12 +23,11 @@
     </div>
 </div>
 
-
 <!-- Bottom ticker and zones -->
 <div id="overlay-bottom">
     <div id="overlay-content">
         <div id="logo">
-            <img src="https://studentrobotics.org/style/assets/logo-text.svg" height="60">
+            <img src="https://studentrobotics.org/style/assets/logo-text.svg" height="60" alt="">
         </div>
         <div id="match-counter" class="sbox-med flair only">
             <div class="content timer"><h2>
@@ -59,7 +53,6 @@
         </div>
     </div>
 </div>
-
 
 <!-- Side bar scores -->
 <div id="overlay-side">
@@ -100,7 +93,6 @@
                 <div class="content"><p><span class="position">8</span><span>BBC</span><span class="score">4</span></p>
                 </div>
             </div>
-
         </div>
     </div>
     <div id="overlay-side-upnext" class="hidden">
@@ -127,6 +119,7 @@
 </div>
 
 <script>
+    const TEST_MODE = true;
 
     cache = {};
 
@@ -147,10 +140,8 @@
         },
         'tla': 'BBC'
     };
-
 </script>
 <script>
-
     /* overlay objects, used to control the overlay display*/
     overlay = {};
 
@@ -403,10 +394,8 @@
             }
         }
     };
-
 </script>
 <script>
-
     state = {
         set_pre_comp: function () {
             overlay.scores.hide();
@@ -554,12 +543,8 @@
 
     setInterval(state.runTick.bind(state), 100);
     setInterval(overlay.matchCounter.runTick.bind(overlay.matchCounter), 100);
-
-
 </script>
 <script>
-
-
     onTeamUpdate = function (team) {
         //when a team update is received cache the team details for use
         console.log('updated teams');
@@ -589,7 +574,8 @@
             },
             type: 'league',
         }];
-        //onMatchUpdate(fakeMatch)
+        if (TEST_MODE)
+            onMatchUpdate(fakeMatch)
     }, 500);
 
     getNextMatch = function () {
@@ -626,9 +612,6 @@
 
     //on start
     comp.matches(receivedMatches);  //get the match table
-
-
 </script>
-
 </body>
 </html>

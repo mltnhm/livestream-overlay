@@ -101,17 +101,13 @@ p {
 }
 
 #overlay-top-content p span{
-    vertical-align: middle;
     text-transform: uppercase;
     line-height: 30px;
 }
 
 #overlay-top-content p span.match-id{
-    font-size: 25px;
     padding-left: 5px;
 }
-
-
 
 #overlay-bottom {
     position: absolute;

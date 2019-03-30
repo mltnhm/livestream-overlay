@@ -80,7 +80,7 @@ function onStreamOpen(e){
 }
 
 function onStreamError(e){
-  if (e.readyState == EventSource.CLOSED) {
+  if (e.readyState === EventSource.CLOSED) {
     if (debug) console.log("Stream connection closed");
   }
   else{
